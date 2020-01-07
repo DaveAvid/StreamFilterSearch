@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox fx:id="vbox" alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.david.ui.Controller">
+   <children>
+      <TableView fx:id="mediaTable" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="titleColumn" prefWidth="150.8" text="Title" />
+          <TableColumn fx:id="dateReleasedColumn" prefWidth="95.8" text="Date Released" />
+            <TableColumn fx:id="genreColumn" prefWidth="102.8" text="Genre" />
+            <TableColumn fx:id="actorColumn" prefWidth="150.8" text="Actors" />
+            <TableColumn fx:id="directorColumn" prefWidth="102.8" text="Director(s)" />
+            <TableColumn fx:id="runTimeColumn" prefWidth="35.8" text="Runtime" />
+            <TableColumn fx:id="typeColumn" prefWidth="40.8" sortType="DESCENDING" text="Format" />
+            <TableColumn fx:id="imdbColumn" prefWidth="35.8" text="IMDB Score" />
+            <TableColumn fx:id="mpaaColumn" prefWidth="50.8" text="MPAA Rating" />
+            <TableColumn fx:id="yearColumn" prefWidth="45.8" text="Year" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="200.8" text="Description" />
+        </columns>
+      </TableView>
+       <HBox id="HBox" fx:id="hbox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+           <children>
+               <Label text="Title:" />
+               <TextField fx:id="filterMovieTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" />
+            <Label text="Actor:" />
+            <TextField fx:id="filterActorTextField" prefHeight="25.0" prefWidth="170.0" />
+            <Label text="Director:" />
+            <TextField fx:id="filterDirectorTextField" prefHeight="25.0" prefWidth="156.0" />
+            <Label text="Genre:" />
+            <TextField fx:id="filterGenreTextField" prefHeight="25.0" prefWidth="167.0" />
+            <Label text="Date On Netflix:" />
+            <TextField fx:id="filterDateTextField" prefHeight="25.0" prefWidth="146.0" />
+           </children>
+       </HBox>
+   </children>
+</VBox>
